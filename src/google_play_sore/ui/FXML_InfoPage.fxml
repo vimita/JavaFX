@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.text.*?>
+
+<FlowPane prefHeight="800.0" prefWidth="1340.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="google_play_sore.controller.Overview_Controller">
+  <!-- TODO Add Nodes -->
+  <children>
+    <Pane prefHeight="150.0" prefWidth="1340.0">
+      <children>
+        <ImageView fitHeight="259.13066843936315" fitWidth="1232.0" layoutX="1.0" layoutY="-8.0" pickOnBounds="true" preserveRatio="true">
+          <image>
+            <Image url="@../../../resources/images/dataset-cover.jpg" />
+          </image>
+        </ImageView>
+      </children>
+    </Pane>
+    <HBox prefHeight="650.0" prefWidth="1340.0">
+      <children>
+        <SplitPane dividerPositions="0.3131539611360239, 0.6666666666666666" focusTraversable="true" prefHeight="550.0" prefWidth="1340.0">
+          <items>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="479.86688232421875" prefWidth="310.0">
+              <children>
+                <Label layoutX="14.0" layoutY="14.0" prefHeight="39.0" prefWidth="135.0" text="Data Source">
+                  <font>
+                    <Font name="Comic Sans MS" size="15.0" fx:id="x1" />
+                  </font>
+                </Label>
+                <Label fx:id="lbl_dataset" layoutX="14.0" layoutY="70.0" prefHeight="53.7601318359375" prefWidth="256.0" style="  -fx-background-image:url('@../../../resources/images/logo.jpg');&#10;  -fx-background-repeat: no-repeat;&#10;  -fx-background-position: right center;&#10;  -fx-font-size: 20;&#10;" text="       googleplaystore.csv" />
+                <Button fx:id="btn_view" layoutX="168.0" layoutY="124.0" mnemonicParsing="false" onAction="#handleDataset" text="View" />
+                <Hyperlink fx:id="hlink_dataset" layoutX="14.0" layoutY="221.0" onAction="#OpenLink" prefHeight="54.0" prefWidth="285.0" text="https://www.kaggle.com/lava18/google-play-store-apps#googleplaystore.csv" textFill="#1400ff" />
+                <Label layoutX="17.0" layoutY="201.0" text="DataSet : Retrived from" />
+              </children>
+            </AnchorPane>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="508.0" prefWidth="337.0">
+              <children>
+                <Label font="$x1" layoutX="27.0" layoutY="14.0" prefHeight="33.0" prefWidth="317.3121337890625" text="About file" />
+                <Label layoutX="2.0" layoutY="31.0" prefHeight="121.0" prefWidth="396.0" text="Google Play Store Apps" textAlignment="CENTER">
+                  <font>
+                    <Font name="Comic Sans MS" size="25.0" />
+                  </font>
+                </Label>
+                <TextArea editable="false" layoutX="14.0" layoutY="152.0" prefHeight="259.0" prefWidth="318.0" text="&#10;Web scraped data of 10k Play Store apps for analysing the Android market.&#10;&#10;Details of the applications on Google Play. There are 13 features which describe a given app details.&#10;&#10;" wrapText="true" />
+              </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="528.0" prefWidth="405.0">
+              <children>
+                <Label font="$x1" layoutX="14.0" layoutY="7.0" prefHeight="39.0" prefWidth="190.0" text="Columns" />
+                <Label layoutX="14.0" layoutY="49.0" prefHeight="33.0" prefWidth="215.0" text="App - Application name" />
+                <Label layoutX="14.0" layoutY="85.0" prefHeight="39.0" prefWidth="297.0" text="Category - Category the app belongs to" />
+                <Label layoutX="14.0" layoutY="122.0" prefHeight="39.0" prefWidth="297.0" text="Rating - Overall user rating of the app" />
+                <Label layoutX="14.0" layoutY="160.0" prefHeight="39.0" prefWidth="297.0" text="Reviews - No. of user reviews of app" />
+                <Label layoutX="14.0" layoutY="196.0" prefHeight="39.0" prefWidth="297.0" text="Size - Size of the app" />
+                <Label layoutX="14.0" layoutY="235.0" prefHeight="39.0" prefWidth="297.0" text="Installs - No. of user download the app" />
+                <Label layoutX="14.0" layoutY="273.0" prefHeight="39.0" prefWidth="297.0" text="Type -  Paid or free" />
+                <Label layoutX="14.0" layoutY="308.0" prefHeight="39.0" prefWidth="297.0" text="Price  - Price of the app" />
+                <Label layoutX="14.0" layoutY="343.0" prefHeight="39.0" prefWidth="297.0" text="Content Rating - Age group the app is targeted at - Children / Mature 21+ / Adult" />
+                <Label layoutX="14.0" layoutY="381.0" prefHeight="39.0" prefWidth="297.0" text="Genres - An app can belong to multiple genres (apart from its main category)." />
+                <Label layoutX="14.0" layoutY="418.0" prefHeight="39.0" prefWidth="297.0" text="Last Updated - Date when the app was last updated on Play Store " />
+                <Label layoutX="14.0" layoutY="455.0" prefHeight="39.0" prefWidth="297.0" text="Current Ver - Current version of the app available on Play Store " />
+                <Label layoutX="14.0" layoutY="489.0" prefHeight="39.0" prefWidth="297.0" text="Android Ver - Min required Android version" />
+              </children>
+            </AnchorPane>
+          </items>
+          <HBox.margin>
+            <Insets top="20.0" />
+          </HBox.margin>
+        </SplitPane>
+      </children>
+    </HBox>
+  </children>
+</FlowPane>
